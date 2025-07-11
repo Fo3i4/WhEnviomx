@@ -1,148 +1,206 @@
+# Estructura del proyecto
+
+```
+whenvio-mx/
+├── index.html
+└── assets/
+    └── css/
+        └── style.css
+```
+
+---
+
+## 1. `index.html`
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ofertas WhEnvioMX</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0B132B;
-      color: #FFFFFF;
-    }
-    header {
-      background-color: #0B132B;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      color: #25D366;
-      font-size: 2.5rem;
-    }
-    section {
-      padding: 20px 15px;
-      text-align: center;
-    }
-    .intro {
-      max-width: 800px;
-      margin: 0 auto 30px;
-      line-height: 1.6;
-    }
-    .features-list {
-      text-align: left;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      list-style: none;
-      padding: 0;
-    }
-    .features-list li {
-      background: #1C2541;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 8px;
-    }
-    .offer {
-      background-color: #1C2541;
-      padding: 20px;
-      margin: 15px auto;
-      border-radius: 12px;
-      max-width: 400px;
-      text-align: center;
-    }
-    .offer h2 {
-      color: #25D366;
-      margin-bottom: 10px;
-    }
-    .offer p {
-      margin: 5px 0;
-    }
-    .btn {
-      background-color: #25D366;
-      color: #0B132B;
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    footer {
-      padding: 20px;
-      font-size: 0.8rem;
-      background-color: #0B132B;
-      color: #FFFFFF;
-      text-align: center;
-    }
-  </style>
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <header>
+  <header class="site-header">
     <h1>WhEnvioMX</h1>
     <p>Automatiza tus mensajes y llega a más clientes cada día</p>
   </header>
 
-  <section>
-    <div class="intro">
+  <main>
+    <section class="intro">
       <h2>¿Qué es WhEnvioMX?</h2>
       <p>WhEnvioMX es una plataforma que te permite:</p>
-      <ul class="features-list">
+      <ul class="features">
         <li>Enviar mensajes masivos por WhatsApp de forma segura y sin bloqueos.</li>
-        <li>Utilizar hasta 80 envíos por número al día (400 envíos con 5 números).</li>
-        <li>Gestionar bases de datos segmentadas para mejorar tu tasa de respuesta.</li>
+        <li>Hasta 80 envíos diarios por número (400 con 5 números).</li>
+        <li>Gestionar bases de datos segmentadas para mejorar la respuesta.</li>
         <li>Evitar costos elevados en anuncios y algoritmos restrictivos.</li>
         <li>Control total de tus contactos y reutilización de listas.</li>
       </ul>
-      <p>Ideal para dueños de negocios, vendedores de servicios y equipos de ventas que buscan <strong>maximizar sus resultados</strong> con un método de comunicación <strong>exitoso y medible</strong>.</p>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2>Paquetes y Ofertas</h2>
-    <div class="offer">
-      <h2>💼 Básico - $350 MXN</h2>
-      <p>Licencia individual de WhEnvioMX</p>
-      <p>Instalación y asesoría inicial incluida</p>
-    </div>
+    <section class="offers">
+      <h2>Paquetes y Ofertas</h2>
 
-    <div class="offer">
-      <h2>💳 Lista 1000 Contactos - $700 MXN</h2>
-      <p>Base de datos segmentada lista para usar</p>
-    </div>
+      <div class="offer">
+        <h3>💼 Básico</h3>
+        <p class="price">$350 MXN</p>
+        <p>Licencia individual + asesoría inicial</p>
+      </div>
 
-    <div class="offer">
-      <h2>💰 Combo Ahorro - $950 MXN</h2>
-      <p>Licencia + Lista de 1000 contactos</p>
-    </div>
+      <div class="offer">
+        <h3>💳 Lista 1000 Contactos</h3>
+        <p class="price">$700 MXN</p>
+        <p>Base de datos segmentada lista para usar</p>
+      </div>
 
-    <div class="offer">
-      <h2>🚀 Dúo - $1,700 MXN</h2>
-      <p>2 Licencias + Lista de 2000 contactos</p>
-    </div>
+      <div class="offer">
+        <h3>💰 Combo Ahorro</h3>
+        <p class="price">$950 MXN</p>
+        <p>Licencia + lista de 1000 contactos</p>
+      </div>
 
-    <div class="offer">
-      <h2>🔊 Pro - $3,900 MXN</h2>
-      <p>5 Licencias + Lista de 5000 contactos + Instalación guiada</p>
-    </div>
+      <div class="offer">
+        <h3>🚀 Dúo</h3>
+        <p class="price">$1,700 MXN</p>
+        <p>2 licencias + lista de 2000 contactos</p>
+      </div>
 
-    <div class="offer">
-      <h2>🔄 Recarga - $500 MXN</h2>
-      <p>1000 contactos adicionales</p>
-    </div>
+      <div class="offer">
+        <h3>🔊 Pro</h3>
+        <p class="price">$3,900 MXN</p>
+        <p>5 licencias + lista de 5000 contactos + instalación guiada</p>
+      </div>
 
-    <div class="offer">
-      <h2>📢 Servicio de Envío - $1,200 MXN</h2>
-      <p>Nosotros enviamos tus mensajes hasta 1000 envíos</p>
-    </div>
+      <div class="offer">
+        <h3>🔄 Recarga</h3>
+        <p class="price">$500 MXN</p>
+        <p>1000 contactos adicionales</p>
+      </div>
 
-    <a class="btn" href="https://wa.me/529382504976" target="_blank">Solicitar Información</a>
-  </section>
+      <div class="offer">
+        <h3>📢 Servicio de Envío</h3>
+        <p class="price">$1,200 MXN</p>
+        <p>Envío de hasta 1000 mensajes por nosotros</p>
+      </div>
 
-  <footer>
-    <p>© 2025 WhEnvioMX - Contacto: borbollaycia@gmail.com | +52 9382504976</p>
+      <a class="btn" href="https://wa.me/529382504976" target="_blank" rel="noopener">Solicitar Información</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 WhEnvioMX</p>
+    <p>Contacto: <a href="mailto:borbollaycia@gmail.com">borbollaycia@gmail.com</a> | <a href="tel:+529382504976">+52 938 250 4976</a></p>
   </footer>
 
 </body>
 </html>
+```
+
+---
+
+## 2. `assets/css/style.css`
+```css
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0B132B;
+  color: #FFFFFF;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Encabezado */
+.site-header {
+  background-color: #0B132B;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.site-header h1 {
+  color: #25D366;
+  font-size: 2.5rem;
+}
+.site-header p {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* Sección de introducción */
+.intro {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.features {
+  list-style: none;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+.features li {
+  background: #1C2541;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Ofertas */
+.offers {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.offers h2 {
+  margin-bottom: 1rem;
+}
+.offer {
+  background-color: #1C2541;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 400px;
+}
+.offer h3 {
+  color: #25D366;
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Botón */
+.btn {
+  display: inline-block;
+  background-color: #25D366;
+  color: #0B132B;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Pie de página */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #0B132B;
+  font-size: 0.875rem;
+}
+.site-footer a {
+  color: #25D366;
+}
+```
